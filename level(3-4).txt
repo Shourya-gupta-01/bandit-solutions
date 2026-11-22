@@ -1,0 +1,16 @@
+Bandit Level-3
+
+To connect to ssh run command:
+ssh -p 2220 bandit3@bandit.labs.overthewire.org
+
+Level(3-4) commands in sequence:
+Description of the problem -> The password for the next level is stored in a hidden file in the inhere directory. 
+
+Commands in sequence:
+1. cd inhere
+
+2. ls -a                                              # '-a' is a flag used to display the hidden files in a folder.                                      
+
+3. cat ./...Hiding-From-You
+
+Use the password to enter level 4.
