@@ -1,0 +1,16 @@
+Bandit Level-4
+
+To connect to ssh run command:
+ssh -p 2220 bandit4@bandit.labs.overthewire.org
+
+Level(4-5) commands in sequence:
+Description of the problem -> The password for the next level is stored in the only human-readable file in the inhere directory.
+
+Commands in sequence:
+1. cd inhere
+
+2. for i in *; do file "./$i"; done                   # looping through all the files in the directory and finding which file is human-readable file (ASCII text). 
+
+3. cat ./-file07
+
+Use the password to enter level 5.
