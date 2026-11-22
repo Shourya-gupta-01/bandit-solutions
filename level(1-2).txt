@@ -1,0 +1,15 @@
+Bandit Level-1
+
+To connect to ssh run command:
+ssh -p 2220 bandit1@bandit.labs.overthewire.org
+
+Level(1-2) commands in sequence:
+Description of problem -> The password for the next level is stored in a file called - located in the home directory
+
+--> The file name is starting with '-' cannot be read directly using cat, the terminal takes it as a flag.
+--> Solution use './' before the start of filename
+
+Commands in sequence:
+1. cat ./-
+
+--> Use the password to enter level 2.
