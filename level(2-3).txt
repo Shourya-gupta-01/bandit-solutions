@@ -1,0 +1,15 @@
+Bandit Level-2
+
+To connect to ssh run command:
+ssh -p 2220 bandit2@bandit.labs.overthewire.org
+
+Level(2-3) commands in sequence:
+Description of problem -> The password for the next level is stored in a file called --spaces in this filename-- located in the home directory.
+
+--> Because of 'spaces' in the filename the terminal doesn't reads the filename as one single unit.
+--> Solution use "" to enclose the filename.
+
+Commands in sequence:
+1. cat "./--spaces in this filename--"
+
+Use the password to enter level 3.
