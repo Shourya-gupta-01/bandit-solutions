@@ -1,0 +1,28 @@
+Bandit Level-5
+
+To connect to ssh run command:
+ssh -p 2220 bandit5@bandit.labs.overthewire.org
+
+Level(5-6) commands in sequence:
+Description of the problem -> The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:
+
+human-readable
+1033 bytes in size
+not executable
+
+Commands in sequence:
+1. cd inhere
+
+2. find . -type f -size 1033c                         # looks every file in every folder and with size 1033 bytes.
+Breakdown
+find -> used to find the file in the directory.
+-type f -> specifies look for only file.
+-size 1033c -> only look for files of size 1033 bytes.
+
+3. file ./maybehere07/.file2                          # to check if file is human human-readable.
+
+4. ls -l ./maybehere07/.file2                         # to check if file is not executable.
+
+5. cat ./maybehere07/.file2
+
+Use the password to enter level 6.
