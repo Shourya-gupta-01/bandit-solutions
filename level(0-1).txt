@@ -1,0 +1,21 @@
+Bandit Level-0
+
+To connect to ssh run command:
+ssh -p 2220 bandit0@bandit.labs.overthewire.org
+
+Breadown of command:
+ssh -> used to connect to remote server.
+-p 2220 -> stands for port of the server.             # For this level
+username@ip -> bandit0@bandit.labs.overthewire.org    # For the Level-0
+
+Level(0-1) commands in sequence:
+1. Check "where you are":
+pwd
+
+2. List all the file and folders of that directory:
+ls
+
+3. Read the file:
+cat readme                                            # cat is used to read the content of the file.
+
+--> Use the password you see to enter in the new level.
