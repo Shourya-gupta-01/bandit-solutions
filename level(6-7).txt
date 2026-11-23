@@ -1,0 +1,24 @@
+Bandit Level-6  
+  
+To connect to ssh run command:  
+ssh -p 2220 bandit6@bandit.labs.overthewire.org  
+  
+Level(6-7) commands in sequence:  
+Description of the problem ->  The password for the next level is stored somewhere on the server and has all of the following properties:
+
+owned by user bandit7
+owned by group bandit6
+33 bytes in size
+ 
+Commands in sequence:  
+1. find / -user bandit7 -group bandit6 -size 33c 2>/dev/null | xargs cat
+
+Breakdown:
+find / -> used to find the file in the entire root filesystem.
+-user -> who owns the file (Who has the permission to read/write).
+-group -> what group owns the ownership with bandit7.
+-size -> sepecifies the size of file.
+2>/dev/null -> dump all the errors and don't show it on the terminal.
+xargs -> take the output of previous command and use as argument in the next command.
+
+Use the password to enter level 7.
