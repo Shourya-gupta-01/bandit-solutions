@@ -1,0 +1,16 @@
+Bandit Level-8  
+  
+To connect to ssh run command:  
+ssh -p 2220 bandit8@bandit.labs.overthewire.org  
+  
+Level(8-9) commands in sequence:  
+Description of the problem ->  The password for the next level is stored in the file data.txt and is the only line of text that occurs only once
+  
+Commands in sequence:  
+1. sort data.txt | uniq -u
+
+Breakdown:
+sort -> sort the lines in the file.
+uniq -u -> outputs the line that is the only unique.                           # only detects duplicate if they are next to each other.
+  
+Use the password to enter level 9.
