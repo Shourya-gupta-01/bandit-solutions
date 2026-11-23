@@ -1,0 +1,14 @@
+Bandit Level-11
+  
+To connect to ssh run command:  
+ssh -p 2220 bandit11@bandit.labs.overthewire.org  
+  
+Level(11-12) commands in sequence:  
+Description of the problem -> The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions 
+  
+Commands in sequence:  
+1. cat data.ext | tr 'A-Za-z' 'N-ZA-Mn-za-m' | awk "{print $NF}"
+
+tr -> is used to translate, here we are replacing every character from its 13th letter.
+
+Use the password to enter level 12.
