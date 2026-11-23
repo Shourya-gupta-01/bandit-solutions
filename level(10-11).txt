@@ -1,0 +1,16 @@
+Bandit Level-10  
+  
+To connect to ssh run command:  
+ssh -p 2220 bandit10@bandit.labs.overthewire.org  
+  
+Level(10-11) commands in sequence:  
+Description of the problem ->  The password for the next level is stored in the file data.txt, which contains base64 encoded data
+  
+Commands in sequence:  
+1. base64 -d data.txt | awk '{print $NF}'
+
+Breakdown:
+base64 -> read or decode base64 encoded data.
+-d -> flag to decode.
+
+Use the password to enter level 11.
