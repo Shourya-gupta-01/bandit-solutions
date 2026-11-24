@@ -1,0 +1,56 @@
+Bandit Level-12  
+  
+To connect to ssh run command:  
+ssh -p 2220 bandit12@bandit.labs.overthewire.org  
+  
+Level(12-13) commands in sequence:  
+Description of the problem ->  The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work. Use mkdir with a hard to guess directory name. Or better, use the command “mktemp -d”. Then copy the datafile using cp, and rename it using mv (read the manpages!)
+  
+Commands in sequence:  
+1. cd $(mktemp -d)                                                               # Create a temporary directory
+
+2. cp ~/data.txt .                                                               # copy file
+
+3. file data.txt                                                                 # Checking file type
+
+4. xxd -r data.txt > data_binary.gz                                              # reverse hexdump
+
+5. gzip -d data_binary.gz                                                        # decompress gzip file
+
+6. file data_binary                                                              # Checking the file type of the previous command output
+
+7. bzip2 -d data_binary                                                          # decompressing bzip file
+
+8. mv data_binary.out data_binary.gz                                             # rename file
+
+9. gzip -d data_binary.gz                                                        # decompress
+
+10. file data_binary
+
+11. mv data_binary data_binary.tar
+
+12. tar -xf data_binary.tar                                                      # decompress tar file
+
+13. file data5.data_bin
+
+14. tar -xf data5.bin
+
+15. file data6.bin
+
+16. bzip2 -d data6.bin
+
+17. file data6.bin.out
+
+18. mv data6.bin.out data6.bin.tar
+
+19. tar -xf data6.bin.tar
+
+20. mv data8.bin data8.gz 
+
+21. gzip -d data8.gz
+
+22. file data8
+
+23. cat data8 | awk '{print $NF}'                                                # read the password
+
+Use the password to enter level 13.
