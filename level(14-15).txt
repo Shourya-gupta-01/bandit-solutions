@@ -1,0 +1,16 @@
+Bandit Level-14  
+  
+To connect to ssh run command:  
+ssh -p 2220 bandit14@bandit.labs.overthewire.org  
+  
+Level(14-15) commands in sequence:  
+Description of the problem -> The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost. 
+  
+Commands in sequence:  
+1. cat /etc/badit_pass/bandit14
+
+2. nc localhost 30000                                                 # netcat command.
+
+3. enter password
+
+Use the password to enter level 15.
