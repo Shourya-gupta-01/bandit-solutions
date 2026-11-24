@@ -1,0 +1,26 @@
+Bandit Level-13  
+  
+To connect to ssh run command:  
+ssh -p 2220 bandit13@bandit.labs.overthewire.org  
+  
+Level(13-14) commands in sequence:  
+Description of the problem -> The password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. Look at the commands that logged you into previous bandit levels, and find out how to use the key for this level.
+If you need help with this level: a hint file can be found in the home directory.
+Make sure to read the error messages as they are informative.
+ 
+Commands in sequence:  
+1. scp -P 2220 bandit13@bandit.labs.overthewire.org:sshkey.private .
+Breakdown:
+scp --> Secure Copy
+-P --> port
+username@ip --> bandit13@bandit.labs.overthewire.org
+: --> seperate file location from ip
+pickup destination --> sshkey.private .(curent location)
+ 
+2. chmod 600 sshkey.private                                                    # read/write permission
+
+3. ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
+Breakdown:
+-i --> identity flag specifies the key.
+
+You are in level 14
