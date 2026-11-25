@@ -1,0 +1,12 @@
+Bandit Level-15  
+  
+To connect to ssh run command:  
+ssh -p 2220 bandit15@bandit.labs.overthewire.org  
+  
+Level(15-16) commands in sequence:  
+Description of the problem -> The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL/TLS encryption.
+  
+Commands in sequence:
+1. openssl s_client -connect localhost:30001                                             # host:port
+  
+Use the password to enter level 16.
