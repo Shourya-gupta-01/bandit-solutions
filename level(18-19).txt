@@ -1,0 +1,12 @@
+Bandit Level-18  
+  
+To connect to ssh run command:  
+ssh -p 2220 bandit18@bandit.labs.overthewire.org -t "/bin/sh"                             # because someone altered the bash.rc file
+ 
+Level(18-19) commands in sequence:  
+Description of the problem -> The password for the next level is stored in a file readme in the homedirectory. Unfortunately, someone has modified .bashrc to log you out when you log in with SSH.
+  
+Commands in sequence:  
+1. cat readme
+  
+Use the password to enter level 19.
