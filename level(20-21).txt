@@ -1,0 +1,14 @@
+Bandit Level-20  
+  
+To connect to ssh run command:  
+ssh -p 2220 bandit20@bandit.labs.overthewire.org  
+  
+Level(20-21) commands in sequence:  
+Description of the problem -> There is a setuid binary in the homedirectory that does the following: it makes a connection to localhost on the port you specify as a commandline argument. It then reads a line of text from the connection and compares it to the password in the previous level (bandit20). If the password is correct, it will transmit the password for the next level (bandit21).
+  
+Commands in sequence:
+1. echo "--password of the current level--" | nc -l -p 4441 &                # opens the port 4441 on localhost for listening.
+
+2 ./suconnect 4441
+  
+Use the password to enter level 21.
