@@ -1,0 +1,34 @@
+Bandit Level-17  
+  
+To connect to ssh run command:  
+ssh -i sshkey.private bandit17@bandit.labs.overthewire.org -p 2220
+  
+Level(17-18) commands in sequence:  
+Description of the problem -> There are 2 files in the homedirectory: passwords.old and passwords.new. The password for the next level is in passwords.new and is the only line that has been changed between passwords.old and passwords.new 
+  
+Commands in sequence:  
+1. diff passwords.new passwords.old
+
+The Normal Format
+This format tells you how to change the first file to match the second.
+© The Symbols:
+© a: Add
+o c: Change
+© d: Delete
+© The Arrows: >
+© < Line from the first file.
+© >: Line from the second file.
+
+1. (Alternate) diff -u passwords.new passwords.old                                             # -u make the output git-style
+
+This is the standard for Git and software patches. It's much more intuitive.
+
+© --- / +++: Shows which file is which (Original vs. New).
+©@@ -1,3 +1,3 (@@: This is the "hunk” header. It tells you the coordinates (line numbers) of the
+changes.
+
+© - (Red/Minus): This line was in the first file but is gone in the second.
+
+© + (Green/Plus): This line was added in the second file.
+
+Use the password to enter level 18.
